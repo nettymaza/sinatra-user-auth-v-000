@@ -16,12 +16,13 @@ class ApplicationController < Sinatra::Base
     erb :'/registrations/signup'
   end
 
-  #Handles post request, when user hits 'submit' on signup form
+  #Handles post request, when user hits 'submit' on signup form.
   post '/registrations' do
 
     redirect '/users/home'
   end
 
+  #Renders the login form
   get '/sessions/login' do
     erb :'sessions/login'
   end
