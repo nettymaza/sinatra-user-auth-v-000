@@ -33,11 +33,13 @@ class ApplicationController < Sinatra::Base
     redirect '/users/home'
   end
 
+  #Logs user out by clearing the session hash
   get '/sessions/logout' do
 
     redirect '/'
   end
 
+  #Renders user's home page.
   get '/users/home' do
 
     erb :'/users/home'
