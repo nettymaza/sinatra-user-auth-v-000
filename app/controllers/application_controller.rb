@@ -32,6 +32,7 @@ class ApplicationController < Sinatra::Base
   #Handles post request that gets sent when user hits 'submit' on login form.
   post '/sessions' do
     @user = User.find_by(email: params["email"], password: params["password"])
+    session[:id] = @user.id
     redirect '/users/home'
   end
 
