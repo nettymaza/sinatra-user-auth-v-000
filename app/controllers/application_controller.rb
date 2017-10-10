@@ -18,8 +18,8 @@ class ApplicationController < Sinatra::Base
 
   #Handles post request, when user hits 'submit' on signup form.
   post '/registrations' do
-    puts params
-
+    @user = User.new(name: params['name'], email: params['email'], password: params['password'])
+    @user.save
     redirect '/users/home'
   end
 
