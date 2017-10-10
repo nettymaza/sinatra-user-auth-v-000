@@ -27,6 +27,7 @@ class ApplicationController < Sinatra::Base
     erb :'sessions/login'
   end
 
+  #Handles post request that gets sent when user hits 'submit' on login form.
   post '/sessions' do
 
     redirect '/users/home'
