@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
 
   #Handles post request, when user hits 'submit' on signup form.
   post '/registrations' do
+    puts params
 
     redirect '/users/home'
   end
