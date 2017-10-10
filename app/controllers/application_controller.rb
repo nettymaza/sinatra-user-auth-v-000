@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "secret"
   end
 
-  get '/' do 
+  get '/' do
     erb :home
   end
 
@@ -16,8 +16,9 @@ class ApplicationController < Sinatra::Base
     erb :'/registrations/signup'
   end
 
+  #Handles post request, when user hits 'submit' on signup form
   post '/registrations' do
-    
+
     redirect '/users/home'
   end
 
@@ -26,17 +27,17 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/sessions' do
-    
+
     redirect '/users/home'
   end
 
-  get '/sessions/logout' do 
+  get '/sessions/logout' do
 
     redirect '/'
   end
 
   get '/users/home' do
-   
+
     erb :'/users/home'
   end
 
