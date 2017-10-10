@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
 
   #Handles post request that gets sent when user hits 'submit' on login form.
   post '/sessions' do
-
+    puts params
     redirect '/users/home'
   end
 
